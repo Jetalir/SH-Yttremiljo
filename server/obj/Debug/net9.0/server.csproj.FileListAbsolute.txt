@@ -26,3 +26,4 @@ C:\Users\jetal\Desktop\Sysm8\LIA\SH Yttremiljo\server\obj\Debug\net9.0\refint\se
 C:\Users\jetal\Desktop\Sysm8\LIA\SH Yttremiljo\server\obj\Debug\net9.0\server.pdb
 C:\Users\jetal\Desktop\Sysm8\LIA\SH Yttremiljo\server\obj\Debug\net9.0\server.genruntimeconfig.cache
 C:\Users\jetal\Desktop\Sysm8\LIA\SH Yttremiljo\server\obj\Debug\net9.0\ref\server.dll
+C:\Users\jetal\Desktop\Sysm8\LIA\SH Yttremiljo\server\obj\Debug\net9.0\server.sourcelink.json
