@@ -1,4 +1,5 @@
 import { TreePine, Hammer, Ruler } from "lucide-react";
+import AnimateOnScroll from "./AnimateOnScroll";
 
 export default function Services() {
   const services = [
@@ -25,11 +26,14 @@ export default function Services() {
   return (
     <section id="services" className="bg-white">
       <div className="max-w-screen-xl mx-auto px-4 md:px-6 py-16">
+      <AnimateOnScroll>
         <header className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Våra tjänster</h2>
-          <div className="w-16 h-[2px] bg-emerald-500 mx-auto mt-3" />
+          <div className="w-16 h-[2px] bg-sky-400 mx-auto mt-3" />
         </header>
+        </AnimateOnScroll>
 
+        <AnimateOnScroll>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10">
           {services.map((service, index) => (
             <div key={index} className="flex flex-col items-start space-y-4 hover:scale-[1.02] transition-transform duration-300">
@@ -45,7 +49,9 @@ export default function Services() {
             </div>
           ))}
         </div>
+        </AnimateOnScroll>
       </div>
+      
     </section>
   );
 }
