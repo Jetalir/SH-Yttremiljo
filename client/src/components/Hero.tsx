@@ -8,17 +8,15 @@ const Hero: React.FC = () => {
         <div className="pl-20 md:pl-40 lg:pl-60 xl:pl-80 pr-8 md:pr-16 min-h-screen flex flex-col justify-center">
           <div className="max-w-xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-slate-900 opacity-0 animate-[fadeInUp_1s_ease-out_forwards]">
-              Byggnationer & utemiljöer
+              Trädgård & Utemiljö
             </h1>
 
             <div className="mt-8 md:mt-10 pl-4 md:pl-5 border-l-[2px] border-sky-400 max-w-[520px] opacity-0 animate-[fadeInUp_1s_ease-out_0.3s_forwards]">
               <p className="text-sm md:text-base text-slate-700 leading-relaxed">
-                Vi hjälper privatpersoner och företag att skapa hållbara, trivsamma och
-                funktionella miljöer – ute som inne. Med noggrant hantverk, tydlig dialog och
-                fasta tidsramar tar vi hand om allt från markarbete och trädgårdsanläggning till
-                byggnation och renovering – utan att kompromissa med kvalitet och
-                hantverksskicklighet. Med oss får du en professionell process och ett utmärkt
-                resultat.
+                Vi gör din drömträdgård verklighet. Plattläggning, trädäck, uteplatser,
+                murar, rabatter och gräsmattor – vi fixar allt. Med många års erfarenhet
+                inom markarbete, plantering, trädfällning och byggnation gör vi om din
+                utemiljö till en plats du älskar. Kvalitet i varje steg, från start till mål.
               </p>
             </div>
           </div>

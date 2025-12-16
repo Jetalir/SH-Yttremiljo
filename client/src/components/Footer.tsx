@@ -1,4 +1,32 @@
+import { useNavigate, useLocation } from "react-router-dom";
+
 export default function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Handle navigation to sections
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+
+    // If we're not on the home page, navigate there first
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation to complete, then scroll
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      // Already on home page, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <footer className="bg-[#3d3428]">
       {/* Main footer content */}
@@ -19,13 +47,13 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-white mb-4">Snabblänkar</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#home" className="text-[#c4b5a0] hover:text-primary transition-colors">Hem</a>
+                <a href="#hero" onClick={(e) => handleNavClick(e, "hero")} className="text-[#c4b5a0] hover:text-primary transition-colors">Hem</a>
               </li>
               <li>
-                <a href="#services" className="text-[#c4b5a0] hover:text-primary transition-colors">Tjänster</a>
+                <a href="#services" onClick={(e) => handleNavClick(e, "services")} className="text-[#c4b5a0] hover:text-primary transition-colors">Tjänster</a>
               </li>
               <li>
-                <a href="#contact" className="text-[#c4b5a0] hover:text-primary transition-colors">Kontakt</a>
+                <a href="#contact" onClick={(e) => handleNavClick(e, "contact")} className="text-[#c4b5a0] hover:text-primary transition-colors">Kontakt</a>
               </li>
             </ul>
           </div>

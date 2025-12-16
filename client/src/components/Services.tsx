@@ -4,10 +4,10 @@ import AnimateOnScroll from "./AnimateOnScroll";
 export default function Services() {
   const services = [
     {
-      icon: <TreePine className="text-green-600 w-8 h-8" />,
-      title: "Trädgård & Markarbete",
+      icon: <Ruler className="text-cyan-600 w-8 h-8" />,
+      title: "Bygg & Renovering",
       description:
-        "Vi hjälper dig skapa en vacker och hållbar utemiljö. Allt från markplanering, dränering och stensättning till planteringar och gräsmattor. Vi lägger grunden till en trädgård som håller över tid.",
+        "Från mindre snickerier till större byggprojekt. Vi tar hand om allt från renovering, ombyggnad och tillbyggnad till fasadarbeten – med fokus på kvalitet och kundnöjdhet.",
     },
     {
       icon: <Hammer className="text-pink-600 w-8 h-8" />,
@@ -15,11 +15,12 @@ export default function Services() {
       description:
         "Bygg en uteplats att trivas på. Vi designar och bygger altaner, trädäck, staket och pergolor – med rätt materialval och noggrant utfört hantverk för lång livslängd och snygg finish.",
     },
+    
     {
-      icon: <Ruler className="text-cyan-600 w-8 h-8" />,
-      title: "Bygg & Renovering",
+      icon: <TreePine className="text-green-600 w-8 h-8" />,
+      title: "Trädgård & Markarbete",
       description:
-        "Från mindre snickerier till större byggprojekt. Vi tar hand om allt från renovering, ombyggnad och tillbyggnad till fasadarbeten – med fokus på kvalitet och kundnöjdhet.",
+        "Vi hjälper dig skapa en vacker och hållbar utemiljö. Allt från markplanering, dränering och stensättning till planteringar och gräsmattor. Vi lägger grunden till en trädgård som håller över tid.",
     },
   ];
 

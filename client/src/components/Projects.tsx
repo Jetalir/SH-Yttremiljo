@@ -2,16 +2,16 @@ import ProjectCard, { type Project } from "./ProjectCard";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 export default function Projects() {
-  // Placeholder list; replace with real items later
+  // Project categories with slugs for routing
   const list: Project[] = [
-    { title: "Plattläggning", imageSrc: "/plattlaggning.jpeg" },
-    { title: "Trädäck", imageSrc: "/tradack.jpeg" },
-    { title: "Mur", imageSrc: "/mur.jpeg" },
-    { title: "Rabatt", imageSrc: "/rabatt.jpeg" },
-    { title: "Staket", imageSrc: "/staket.jpeg" },
-    { title: "Grillplats", imageSrc: "/grillplats.jpeg" },
-    { title: "Gräsplantering", imageSrc: "/grasplantering.jpeg" },
-    { title: "Växthus", imageSrc: "/vaxthus.jpeg" },
+    { title: "Plattläggning", imageSrc: "/images/plattlaggning/plattlaggning.jpeg", slug: "plattlaggning" },
+    { title: "Trädäck", imageSrc: "/images/tradack/tradack.jpeg", slug: "tradack" },
+    { title: "Mur", imageSrc: "/images/mur/mur.jpeg", slug: "mur" },
+    { title: "Rabatt", imageSrc: "/images/rabatt/rabatt.jpeg", slug: "rabatt" },
+    { title: "Staket", imageSrc: "/images/staket/staket.jpeg", slug: "staket" },
+    { title: "Uteplats", imageSrc: "/images/uteplats/uteplats.jpeg", slug: "uteplats" },
+    { title: "Gräsplantering", imageSrc: "/images/grasplantering/grasplantering.jpeg", slug: "grasplantering" },
+    { title: "Växthus", imageSrc: "/images/vaxthus/vaxthus.jpeg", slug: "vaxthus" },
   ];
 
   return (
@@ -27,7 +27,7 @@ export default function Projects() {
         <AnimateOnScroll>
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {list.map((p, i) => (
-              <ProjectCard key={i} title={p.title} imageSrc={p.imageSrc} />
+              <ProjectCard key={i} title={p.title} imageSrc={p.imageSrc} slug={p.slug} />
             ))}
           </div>
         </AnimateOnScroll>

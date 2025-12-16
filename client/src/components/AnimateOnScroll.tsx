@@ -24,7 +24,7 @@ const AnimateOnScroll: React.FC<AnimateOnScrollProps> = ({
         }
       },
       {
-        threshold: 0.2, // Trigger when 30% of the element is visible
+        threshold: 0.1, // Trigger when 10% of the element is visible
         rootMargin: "0px 0px -80px 0px", // Trigger slightly before element fully enters viewport
       }
     );
@@ -43,10 +43,14 @@ const AnimateOnScroll: React.FC<AnimateOnScrollProps> = ({
   return (
     <div
       ref={ref}
-      className={`${className} ${
-        isVisible ? "opacity-100 animate-[fadeInUp_1s_ease-out_forwards]" : "opacity-0"
+      className={`${className} transition-opacity duration-100 ${
+        isVisible ? "opacity-100 animate-[fadeInUp_0.6s_ease-out_forwards]" : "opacity-0"
       }`}
-      style={{ animationDelay: `${delay}ms` }}
+      style={{
+        animationDelay: `${delay}ms`,
+        transitionDelay: `${delay}ms`,
+        willChange: isVisible ? 'auto' : 'opacity, transform'
+      }}
     >
       {children}
     </div>

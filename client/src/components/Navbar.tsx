@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,6 +14,30 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Handle navigation to sections
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    setOpen(false);
+
+    // If we're not on the home page, navigate there first
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation to complete, then scroll
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      // Already on home page, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <header
@@ -22,7 +49,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 h-15 flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3">
+        <a href="/" onClick={(e) => handleNavClick(e, "hero")} className="flex items-center gap-3">
           <span className="text-2xl font-bold text-slate-900">SH YttreMiljö</span>
         </a>
 
@@ -30,24 +57,21 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-8">
           <a
             href="#hero"
+            onClick={(e) => handleNavClick(e, "hero")}
             className="text-slate-900 hover:text-sky-600 transition-colors font-medium"
           >
             Hem
           </a>
           <a
             href="#services"
+            onClick={(e) => handleNavClick(e, "services")}
             className="text-slate-900 hover:text-sky-600 transition-colors font-medium"
           >
             Tjänster
           </a>
           <a
-            href="#projects"
-            className="text-slate-900 hover:text-sky-600 transition-colors font-medium"
-          >
-            Projekt
-          </a>
-          <a
             href="#contact"
+            onClick={(e) => handleNavClick(e, "contact")}
             className="px-6 py-2.5 bg-primary text-slate-900 font-medium rounded hover:bg-primary-hover transition-colors"
           >
             Kontakt
@@ -73,29 +97,22 @@ export default function Navbar() {
         <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200">
           <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
             <a
-              href="#home"
-              onClick={() => setOpen(false)}
+              href="#hero"
+              onClick={(e) => handleNavClick(e, "hero")}
               className="block px-4 py-3 text-slate-900 hover:bg-slate-100 rounded transition-colors"
             >
               Hem
             </a>
             <a
               href="#services"
-              onClick={() => setOpen(false)}
+              onClick={(e) => handleNavClick(e, "services")}
               className="block px-4 py-3 text-slate-900 hover:bg-slate-100 rounded transition-colors"
             >
               Tjänster
             </a>
             <a
-              href="#projects"
-              onClick={() => setOpen(false)}
-              className="block px-4 py-3 text-slate-900 hover:bg-slate-100 rounded transition-colors"
-            >
-              Projekt
-            </a>
-            <a
               href="#contact"
-              onClick={() => setOpen(false)}
+              onClick={(e) => handleNavClick(e, "contact")}
               className="block px-4 py-3 bg-primary text-slate-900 font-medium text-center rounded hover:bg-primary-hover transition-colors"
             >
               Kontakt
