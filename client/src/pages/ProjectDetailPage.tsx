@@ -140,11 +140,11 @@ export default function ProjectDetailPage() {
           )}
 
           {/* Image */}
-          <div className="max-w-7xl max-h-[90vh] p-4" onClick={(e) => e.stopPropagation()}>
+          <div className="w-full h-full flex flex-col items-center justify-center p-4 md:p-8" onClick={(e) => e.stopPropagation()}>
             <img
               src={project.images[currentImageIndex].url}
               alt={project.images[currentImageIndex].alt}
-              className="max-w-full max-h-full object-contain"
+              className="max-w-[95vw] max-h-[90vh] w-auto h-auto object-contain"
             />
             <p className="text-white text-center mt-4">
               {currentImageIndex + 1} / {project.images.length}

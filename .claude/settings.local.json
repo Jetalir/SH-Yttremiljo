@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find . -name \"*.jpeg\" -type f -exec sh -c 'mv \"\"$1\"\" \"\"${1%.jpeg}.jpg\"\"' _ {} ;)",
+      "Bash(ls:*)",
+      "Bash(done)",
+      "Bash(for file in *.jpeg)",
+      "Bash(do mv \"$file\" \"$file%.jpeg.jpg\")"
+    ]
+  }
+}
