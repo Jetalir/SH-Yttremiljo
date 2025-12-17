@@ -50,7 +50,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 md:px-6 h-15 flex items-center justify-between">
         {/* Logo */}
         <a href="/" onClick={(e) => handleNavClick(e, "hero")} className="flex items-center gap-3">
-          <span className="text-2xl font-bold text-slate-900">SH YttreMiljö</span>
+          <span className="text-2xl font-bold text-slate-900">SH YttreMiljö AB</span>
         </a>
 
         {/* Desktop Navigation */}

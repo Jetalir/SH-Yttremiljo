@@ -35,7 +35,7 @@ export default function Footer() {
 
           {/* Company info */}
           <div>
-            <h3 className="text-xl font-bold text-white mb-4">SH YttreMiljö</h3>
+            <h3 className="text-xl font-bold text-white mb-4">SH YttreMiljö AB</h3>
             <p className="text-sm text-[#c4b5a0] leading-relaxed">
               Professionella bygg- och utemiljölösningar för privatpersoner och företag.
               Vi skapar hållbara och funktionella miljöer med kvalitet och hantverk.
@@ -90,8 +90,8 @@ export default function Footer() {
       <div className="border-t border-[#4a3f32]">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#c4b5a0]">
-            <p>© {new Date().getFullYear()} SH YttreMiljö. Alla rättigheter förbehållna.</p>
-            <p>Byggnationer & Utemiljöer</p>
+            <p>© {new Date().getFullYear()} SH YttreMiljö AB. Alla rättigheter förbehållna.</p>
+            <p>Trädgård & Utemiljö</p>
           </div>
         </div>
       </div>
