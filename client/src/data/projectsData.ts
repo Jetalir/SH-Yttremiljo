@@ -160,13 +160,6 @@ export const projectsData: Record<string, CategoryData> = {
         imageCount: 8
       },
       {
-        id: "grasplantering-2",
-        title: "Ny gräsmatta",
-        description: "Omfattande gräsplantering med markbearbetning",
-        thumbnail: "/images/tradgard-markarbete/grasplantering-2/1.jpg",
-        imageCount: 5
-      },
-      {
         id: "grasplantering-rabatt-1",
         title: "Gräsmatta med rabatt",
         description: "Gräsplantering kombinerat med rabattanläggning",
@@ -179,6 +172,13 @@ export const projectsData: Record<string, CategoryData> = {
         description: "Färgglad rabatt med fleråriga växter",
         thumbnail: "/images/tradgard-markarbete/rabatt-1/1.jpg",
         imageCount: 2
+      },
+      {
+        id: "grasplantering-2",
+        title: "Ny gräsmatta",
+        description: "Omfattande gräsplantering med markbearbetning",
+        thumbnail: "/images/tradgard-markarbete/grasplantering-2/1.jpg",
+        imageCount: 5
       },
       {
         id: "rabatt-2",
@@ -205,17 +205,10 @@ export const projectsData: Record<string, CategoryData> = {
       },
       {
         id: "staket-1",
-        title: "Metallstaket",
-        description: "Grönt metallstaket för avgränsning av tomt",
+        title: "Staket för innergård",
+        description: "Grönt Staket för avgränsning av innergård",
         thumbnail: "/images/bygg-renovering/staket-1/1.jpg",
         imageCount: 9
-      },
-      {
-        id: "staket-2",
-        title: "Staket i impregnerat trä",
-        description: "Hållbart staket i impregnerat trä",
-        thumbnail: "/images/bygg-renovering/staket-2/1.jpg",
-        imageCount: 1
       },
       {
         id: "tak-1",
@@ -230,6 +223,13 @@ export const projectsData: Record<string, CategoryData> = {
         description: "Montering av växthus med grund och förberedelser",
         thumbnail: "/images/bygg-renovering/vaxthus-1/1.jpg",
         imageCount: 3
+      },
+      {
+        id: "staket-2",
+        title: "Staket i impregnerat trä",
+        description: "Hållbart staket i impregnerat trä",
+        thumbnail: "/images/bygg-renovering/staket-2/1.jpg",
+        imageCount: 1
       },
     ]
   }
